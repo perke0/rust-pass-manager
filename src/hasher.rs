@@ -1,15 +1,15 @@
 use hex_literal::hex;
 use sha2::{Digest, Sha512};
 
-pub fn hashing() -> bool {
+pub fn hashing(input: &str, expected_hex: &str) -> bool {
+    let expected_bytes = match hex::decode(expected_hex) {
+        Ok(bytes) => bytes,
+        Err(_) => return false,
+    };
+
     let mut hasher = Sha512::new();
-    hasher.update(b"hello world");
+    hasher.update(input.as_bytes());
     let result = hasher.finalize();
 
-    result[..]
-        == hex!(
-            "309ecc489c12d6eb4cc40f50c902f2b4d0ed77ee511a7c7a9bcd3ca86d4cd86f
-    989dd35bc5ff499670da34255b45b0cfd830e81f605dcf7dc5542e93ae9cd76f"
-        )[..]
+    result[..] == expected_bytes[..]
 }
-
