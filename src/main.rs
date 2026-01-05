@@ -1,6 +1,5 @@
 #![allow(dead_code, unused)]
 
-use hex_literal::hex;
 mod hasher;
 mod scanner;
 
