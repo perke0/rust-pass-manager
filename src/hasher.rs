@@ -1,7 +1,7 @@
 use hex_literal::hex;
 use sha2::{Digest, Sha512};
 
-pub fn hashing(input: &str, expected_hex: &str) -> bool {
+pub fn check_hashing(input: &str, expected_hex: &str) -> bool {
     let expected_bytes = match hex::decode(expected_hex) {
         Ok(bytes) => bytes,
         Err(_) => return false,

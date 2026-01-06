@@ -1,12 +1,10 @@
-pub fn get_input() -> String {
-    use std::io;
-    println!("Type password here: ");
+use dialoguer::Password;
 
-    let mut input = String::new();
-
-    io::stdin()
-        .read_line(&mut input)
-        .expect("Failed to read input from user");
-
-    input
+pub fn password_input() -> Box<str> {
+    let a = Password::new()
+        .with_prompt("Password")
+        .with_confirmation("Confirm password", "Passwords do not match")
+        .interact()
+        .expect("Failed to read password");
+    Into::into(a)
 }
