@@ -2,6 +2,7 @@
 
 use std::fs::OpenOptions;
 
+mod cli;
 mod file_mng;
 mod hasher;
 mod scanner;
