@@ -8,7 +8,7 @@ mod hasher;
 mod scanner;
 
 fn main() {
-    let path = "passwords.txt";
+    let path = "src/passwords.txt";
     let _ = file_mng::create_file(path);
 
     let compare_hash: String = String::from(
