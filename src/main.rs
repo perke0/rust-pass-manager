@@ -2,7 +2,6 @@
 mod tests;
 
 mod client;
-mod file_mng;
 mod hasher;
 mod password_generator;
 mod password_manager;
