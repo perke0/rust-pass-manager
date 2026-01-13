@@ -1,2 +1,63 @@
-/target
+# Vault files - contains sensitive passwords and master password hashes
+*.vault
+*.json
+password_vault.json
+test_vault.json
+*_vault.json
+
+# Legacy password file
 /src/passwords.txt
+
+# Rust artifacts
+/target/
+Cargo.lock
+
+# Debug artifacts
+**/*.rs.bk
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Key files and certificates
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+
+# Configuration files with sensitive data
+config/
+secrets/
+*.conf
+*.config
