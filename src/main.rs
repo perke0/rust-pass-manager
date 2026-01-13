@@ -1,13 +1,11 @@
 #[cfg(test)]
 mod tests;
 
-mod cli;
 mod client;
 mod file_mng;
 mod hasher;
 mod password_generator;
 mod password_manager;
-mod scanner;
 
 use client::PasswordManagerClient;
 
